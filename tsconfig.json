@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es2020",
+    "outDir": "./.build",
+    "declaration": true,
+    "moduleResolution": "node",
+    "types": [
+      "node",
+      "mocha"
+    ] /* Type declaration files to be included in compilation. */,
+    /* Experimental Options */
+    "experimentalDecorators": true /* Enables experimental support for ES7 decorators. */,
+    "emitDecoratorMetadata": true /* Enables experimental support for emitting type metadata for decorators. */,
+    "forceConsistentCasingInFileNames": true
+  },
+  "exclude": [
+    "node_modules",
+    "./node_modules/*",
+    "./**/node_modules",
+    "./.build/*",
+    ".build",
+    ".serverless",
+    ".vscode",
+    ".vs",
+    "coverage",
+    "obj"
+  ]
+}
+
+// do not exclude "**/*.spec.ts" if you want to debug locally with mocha

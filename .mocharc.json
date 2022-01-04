@@ -1,0 +1,13 @@
+{
+    "recursive": true,
+    "colors": true,
+    "diff": true,
+    "extension": ["ts"],
+    "package": "./package.json",
+    "reporter": "mocha-multi-reporters",
+    "slow": 75,
+    "timeout": 25000,
+    "ui": "bdd",
+    "require": ["ts-node/register"],
+    "spec": "./test/**/*.spec.ts"
+  }

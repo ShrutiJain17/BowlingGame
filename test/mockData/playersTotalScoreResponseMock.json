@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "John Doe",
+        "total": 20
+    },
+    {
+        "id": 2,
+        "name": "Collin Walker",
+        "total": 66
+    },
+    {
+        "id": 3,
+        "name": "Gloria Burke",
+        "total": 90
+    },
+    {
+        "id": 4,
+        "name": "Alexa Vega",
+        "total": 97
+    }
+]

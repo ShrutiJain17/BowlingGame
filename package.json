@@ -1,0 +1,84 @@
+{
+  "name": "tenpinbowling",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "coverage": "./node_modules/.bin/nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha",
+    "start": "serverless offline start --port=8109 --stage=cio-dev --noAuth"
+  },
+  "author": "Shruti Jain",
+  "license": "ISC",
+  "nyc": {
+    "check-coverage": true,
+    "lines": 80,
+    "statements": 80,
+    "functions": 80,
+    "branches": 65,
+    "extension": [
+      ".ts"
+    ],
+    "include": [
+      "**/api/**/!(*.spec.*).ts"
+    ],
+    "exclude": [
+      "**/api/transaction/models/*.ts",
+      "**/api/audit/models/*.ts",
+      "**/api/utility/aws/*",
+      "**/.build/*",
+      "**/*.d.ts",
+      "**/api/**/*[hH]andler.ts"
+    ],
+    "reporter": [
+      "text",
+      "cobertura"
+    ],
+    "report-dir": "./.test_output/coverage",
+    "all": true
+  },
+  "dependencies": {
+    "@types/aws-lambda": "^8.10.66",
+    "@types/chai": "^4.2.14",
+    "@types/chai-as-promised": "^7.1.3",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.10",
+    "@types/sequelize": "^4.28.9",
+    "@types/validator": "^13.1.1",
+    "aws-sdk": "^2.809.0",
+    "fs": "0.0.1-security",
+    "joi": "^17.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.12.2",
+    "lodash": "^4.17.20",
+    "pg": "^8.5.1",
+    "pg-promise": "^10.10.1",
+    "request": "^2.88.2",
+    "sequelize": "^6.3.5",
+    "serverless-pseudo-parameters": "^2.5.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/chai-as-promised": "^7.1.3",
+    "@types/mocha": "^8.2.0",
+    "@types/node": "^14.14.10",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "istanbul": "^0.4.5",
+    "istanbul-reporter-html-internal-css": "0.0.1",
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "nyc": "^15.1.0",
+    "sequelize-mock": "^0.10.2",
+    "serverless": "2.17.0",
+    "serverless-aws-documentation": "^1.1.0",
+    "serverless-domain-manager": "^2.3.6",
+    "serverless-offline": "^6.8.0",
+    "serverless-plugin-include-dependencies": "^4.1.0",
+    "sinon": "^9.2.2",
+    "sinon-chai": "^3.5.0",
+    "ts-node": "^9.1.1",
+    "tslint": "^6.1.3",
+    "typescript": "^4.1.3"
+  }
+}
